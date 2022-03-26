@@ -6,4 +6,4 @@
  open new terminal and run docker exec <contanier ID" BASH 
  To see your total scores go to this URL : curl 127.0.0.1:5001/score
  exit 
- There are WOG_Level_4/WOG-Level4_Snapshot_picture/ in this repository from running the project
+ There are WOG_Level_4/WOG-Level4_Snapshot_pictures / in this repository the snapshot taken when i was running the project
