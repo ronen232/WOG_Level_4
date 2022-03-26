@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('Build docker image'){
             steps{
-                sh 'docker build -t moditamam/selenium:from-jenkins-pipeline .'
+                sh 'docker build -t ronen232/wog-level4:latest .'
             }
         }
         stage('Run & Test') {
             agent {
                 docker {
-                    image "moditamam/selenium:from-jenkins-pipeline"
+                    image "ronen232/wog-level4:latest"
                     reuseNode true
                 }
             }
@@ -29,10 +29,10 @@ pipeline {
 			}
 		}
 
-		stage('Push docker to DockerHub') {
+		stage('Push docker image to DockerHub') {
 
 			steps {
-				sh 'docker push moditamam/selenium:from-jenkins-pipeline'
+				sh 'docker push ronen232/wog-level4:latest'
 			}
 		}
 	}
